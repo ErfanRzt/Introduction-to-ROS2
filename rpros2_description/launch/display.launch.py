@@ -7,8 +7,8 @@ from launch_ros.substitutions import FindPackageShare
 import os
 
 def generate_launch_description():
-    pkg_share = FindPackageShare(package='my_robot').find('my_robot')
-    default_model_path = os.path.join(pkg_share, 'urdf', 'test.urdf')
+    pkg_share = FindPackageShare(package='rpros2_description').find('rpros2_description')
+    default_model_path = os.path.join(pkg_share, 'models', 'rpros2_diff.xacro')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz', 'config.rviz')
 
     robot_state_publisher_node = Node(
