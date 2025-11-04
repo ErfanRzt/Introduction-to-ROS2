@@ -45,6 +45,7 @@ Make sure your code runs correctly and meets the assignment objectives.
 
 ## Table of Contents
 - [Week 1](#week-1-turtlesim-target-visualization-and-teleop)
+- [Week 2](#week-2-differential-drive-robot-to-wheel-velocity-converter)
 
 
 ## `Week 1` Turtlesim Target Visualization and Teleop 
@@ -87,5 +88,45 @@ Explain the steps or solutions you used to fix them.
 - Missing dependencies during build.
 - Incorrect topic names or launch configuration.
 - Logical errors in handling keyboard inputs or random target generation.
+
+## `Week 2` Differential-Drive Robot to Wheel Velocity Converter 
+
+### Learning Objective: 
+- Create custom ROS interfaces.
+- Implement a ROS service server and client.
+- Work with ROS parameters.
+
+### Assignment Task: 
+In this assignment, you will develop a ROS 2 service that converts a differential-drive mobile robot’s linear and angular velocities (`v` and `w`) to individual wheel velocities (`v_l` and `v_r`).
+
+The assignment is broken down into the following steps:
+
+1. Define a custom service interface:
+- In the `rpros2_interfaces` package, create `Wheel2RobotVelocity.srv`.
+- The request should contain `v` (linear velocity) and `w` (angular velocity).
+- The response should contain `v_l` (left wheel velocity) and `v_r` (right wheel velocity).
+- Update the `CMakeLists.txt` file to build the new service.
+
+2. Create a service server:
+- Implement the service server in `wheel2robot_velocity_server.py`.
+- Verify that the service is available using the `rqt` Service Caller plugin.
+
+3. Use ROS parameters:
+- Check that the parameters are correctly set using `ros2 param list`.
+- Modify parameters dynamically with `ros2 param set` and observe changes in the service calculation.
+
+4. Create a service client:
+- Implement a client node wheel2robot_velocity_client.py that takes v and w as command line arguments.
+- Test calling the service from the command line.
+
+5. Use a YAML configuration file:
+- Define custom ROS parameters in `config/wheel2robot_service_params.yaml`.
+- Run the launch file and ensure the parameters are correctly assigned to the service node.
+
+6. Launch the system:
+- Verify that the server node spawns correctly.
+- Confirm that changing parameters in the YAML file affects the service calculations as expected.
+
+### Results: 
 
 </div>
