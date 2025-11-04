@@ -13,12 +13,33 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rosidl_default_generators REQUIRED)
 
-# List your service files
+# >>>>>>>>>>> STUDENT IMPLEMENTATION >>>>>>>>>>>
+#
+# TODO: Add your custom message (.msg), service (.srv),
+# and action (.action) files here. These files define
+# the data structures and communication interfaces your
+# ROS 2 nodes will use for the assignments and projects.
+#
+# Example:
+#   set(STUDENT_INF
+#       "msg/MyMessage.msg"
+#       "srv/MyService.srv"
+#       "action/MyAction.action"
+#   )
+#
+# Make sure the files are placed in the correct folders
+# (msg/, srv/, action/) inside the rpros2_interfaces package.
+#
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+set(STUDENT_INF
+
+)
+
 set(SRV_FILES
   "srv/AddTwoInts.srv"
 )
 
-# List your message files
 set(MSG_FILES
   "msg/String.msg"
 )
@@ -26,6 +47,7 @@ set(MSG_FILES
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${SRV_FILES}
   ${MSG_FILES}
+  ${STUDENT_INF}
 )
 
 if(BUILD_TESTING)
