@@ -1,0 +1,18 @@
+# >>>>>>>>>>> STUDENT IMPLEMENTATION >>>>>>>>>>>
+#
+# TODO: Define the ROS 2 parameters for your differential
+# drive robot node 'wheel2robot_velocity_server'. These
+# parameters will be automatically loaded when the node
+# starts and can be adjusted to match your robot’s setup.
+#
+# Default values:
+#   wheel_radius:        0.1      # meters
+#   wheel_distance:      0.5      # meters
+#   wheel_velocity_unit: 'rpm'    # 'rpm' or 'm/s'
+#
+# You can modify these values to experiment with different
+# robot configurations or behaviors. Ensure that parameter
+# names here match exactly with those declared in your
+# Python node.
+#
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
